@@ -1,4 +1,3 @@
-import boto
 import MySQLdb as mdb
 import sys
 
