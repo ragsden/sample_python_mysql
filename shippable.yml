@@ -4,7 +4,7 @@ python:
   - 2.7
   
 install:
-  - sudo pip install requirements.txt
+  - pip install requirements.txt
 
 # Make folders for the reports, and create the SQL db
 before_script:
