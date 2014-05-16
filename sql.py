@@ -1,6 +1,6 @@
+import boto
 import MySQLdb as mdb
 import sys
-import boto
 
 
 class Mysql():
