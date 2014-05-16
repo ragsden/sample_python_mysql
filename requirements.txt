@@ -1,2 +1,3 @@
 MySQL-python > 0.0.0
 nose
+boto
