@@ -14,8 +14,6 @@ before_script:
 
 script:
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
-  - source ve/bin/activate && coverage run --branch test.py
-  - source ve/bin/activate && coverage xml -o shippable/codecoverage/coverage.xml test.py
-
-after_script:
-  - sleep 8m
+  - pip install -r requirements.txt
+  - coverage run --branch test.py
+  - coverage xml -o shippable/codecoverage/coverage.xml test.py
