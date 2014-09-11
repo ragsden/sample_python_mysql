@@ -6,6 +6,8 @@ python:
   
 install:
   - pip install -r requirements.txt
+  
+archive: true
 
 # Make folders for the reports, and create the SQL db
 before_script:
