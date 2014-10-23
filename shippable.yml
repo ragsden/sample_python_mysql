@@ -16,6 +16,8 @@ build_image:
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - echo "CREATE USER 'circleup'@'localhost' IDENTIFIED BY 'circleup'; GRANT ALL PRIVILEGES ON *.* TO 'circleup'@'localhost' WITH GRANT OPTION; FLUSH PRIVILEGES;" | mysql -u root
+  - sudo /etc/init.d/mysql start &
   - mysql -e 'create database if not exists test;'
 
 script:
