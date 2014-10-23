@@ -9,6 +9,9 @@ install:
   
 archive: true
 
+services:
+  - mongodb
+  
 build_image: 
  name: circleup/test-builds:sourcing
  user: shippable
@@ -17,8 +20,8 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
   #- echo "CREATE USER 'circleup'@'localhost' IDENTIFIED BY 'circleup'; GRANT ALL PRIVILEGES ON *.* TO 'circleup'@'localhost' WITH GRANT OPTION; FLUSH PRIVILEGES;" | mysql -u root
-  - sudo /etc/init.d/mysql start &
-  - sleep 10
+  #- sudo /etc/init.d/mysql start &
+  #- sleep 10
   - mysql -e 'create database if not exists test;'
 
 script:
