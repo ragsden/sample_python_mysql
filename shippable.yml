@@ -8,7 +8,10 @@ install:
   - pip install -r requirements.txt
   
 archive: true
-image_name: circleup/test-builds:sourcing
+
+build_image: 
+ name: circleup/test-builds:sourcing
+ user: shippable
 # Make folders for the reports, and create the SQL db
 before_script:
   - mkdir -p shippable/testresults
